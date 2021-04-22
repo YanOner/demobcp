@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDateTime;
 
 @Service
 public class CurrencyUseCaseImpl implements CurrencyUseCase {
@@ -39,6 +40,7 @@ public class CurrencyUseCaseImpl implements CurrencyUseCase {
                     .rate(rate)
                     .amountConvert(amountConvert)
                     .status(true)
+                    .creationDatetime(LocalDateTime.now())
                     .build();
             currencyPortDB.saveExchange(exchangeResponse);
             return exchangeResponse;

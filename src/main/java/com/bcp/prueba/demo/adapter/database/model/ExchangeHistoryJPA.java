@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "exchange_history")
@@ -39,5 +40,8 @@ public class ExchangeHistoryJPA {
 
     @Column(name = "status", nullable = false)
     private boolean status;
+
+    @Column(name = "creation_datetime", nullable = false)
+    private LocalDateTime creationDatetime;
 
 }
