@@ -14,4 +14,5 @@ public interface CurrencyUseCase {
 
     Flowable<ExchangeResponse> getHistories();
 
+    Single<Boolean> validateUser(String username, String password);
 }

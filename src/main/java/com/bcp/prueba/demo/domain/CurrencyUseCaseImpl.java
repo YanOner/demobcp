@@ -52,4 +52,9 @@ public class CurrencyUseCaseImpl implements CurrencyUseCase {
         return currencyPortDB.getHistories();
     }
 
+    @Override
+    public Single<Boolean> validateUser(String username, String password) {
+        return currencyPortDB.validateUser(username,password);
+    }
+
 }
